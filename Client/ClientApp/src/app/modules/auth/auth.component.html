@@ -1,0 +1,135 @@
+<div class="inner-page">
+  <div class="wrapper">
+    <div [ngSwitch]="loggedInUser.roleId">
+      <!-- <app-admin-menu *ngSwitchCase="userRoles.SuperAdmin"></app-admin-menu> -->
+      <!-- <app-internal-organization-menu *ngSwitchCase="userRoles.Organization">
+      </app-internal-organization-menu>
+      <app-internal-supplier-menu *ngSwitchCase="userRoles.Supplier">
+      </app-internal-supplier-menu> -->
+    </div>
+    <div class="main-page">
+      <!-- header code starts -->
+      <nav class="navbar" [ngClass]="sideBarClass">
+        <div class="mobile-menu d-md-none float-left" (click)="toggleSidebar()">
+          <img src="../../../../assets/images/mobile-menu-1.png" class="sidebarCollapseResponsive"
+               alt="mobile menu icon image" />
+        </div>
+        <div class="title float-left" id="page-title">
+          {{ title }}
+        </div>
+
+        <div class="float-right">
+          <!--class="float-right"-->
+          <div class="user-name">
+            <i class="fa fa-bell-o" aria-hidden="true"></i>
+          </div>
+          <div class="user-name">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </div>
+          <div (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed"
+               aria-controls="collapseBasic" class="user-name">
+            <i class="fa fa-user-o mr-2" aria-hidden="true"></i>
+            <span> {{loggedInUser.Name}}<i class="fa fa-angle-down" aria-hidden="true"></i></span>
+            <div id="collapseBasic" [collapse]="isCollapsed" [isAnimated]="true" class="menudropdown">
+              <ul>
+                <li>
+                  <a href="javascript:void(0)"
+                     (click)="changePassword()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 30.965 27.167">
+                      <g id="Change_password" transform="translate(0)">
+                        <g id="Group_529" data-name="Group 529" transform="translate(6.811 16.901)">
+                          <path id="Path_15226" data-name="Path 15226" d="M202.245,468.348a3.687,3.687,0,0,1-3.682-3.683v-2.9a3.686,3.686,0,0,1,3.682-3.682h16.789a3.688,3.688,0,0,1,3.683,3.682v2.9a3.688,3.688,0,0,1-3.683,3.683Zm0-8.45a1.867,1.867,0,0,0-1.863,1.866v2.9a1.866,1.866,0,0,0,1.863,1.865h16.789a1.867,1.867,0,0,0,1.865-1.865v-2.9a1.868,1.868,0,0,0-1.865-1.866Z" transform="translate(-198.563 -458.082)" fill="#040303" />
+                        </g>
+                        <g id="Group_530" data-name="Group 530" transform="translate(11.13 20.737)">
+                          <ellipse id="Ellipse_504" data-name="Ellipse 504" cx="1.297" cy="1.297" rx="1.297" ry="1.297" fill="#040303" />
+                        </g>
+                        <g id="Group_531" data-name="Group 531" transform="translate(15.272 20.737)">
+                          <ellipse id="Ellipse_505" data-name="Ellipse 505" cx="1.297" cy="1.297" rx="1.297" ry="1.297" fill="#040303" />
+                        </g>
+                        <g id="Group_532" data-name="Group 532" transform="translate(19.412 20.735)">
+                          <path id="Path_15227" data-name="Path 15227" d="M208.869,463.419a1.3,1.3,0,1,1,1.3-1.3A1.3,1.3,0,0,1,208.869,463.419Z" transform="translate(-207.571 -460.823)" fill="#040303" />
+                        </g>
+                        <g id="Group_533" data-name="Group 533" transform="translate(23.554 20.738)">
+                          <path id="Path_15228" data-name="Path 15228" d="M211.83,463.418a1.3,1.3,0,1,1,1.3-1.3A1.3,1.3,0,0,1,211.83,463.418Z" transform="translate(-210.532 -460.825)" fill="#040303" />
+                        </g>
+                        <g id="Group_534" data-name="Group 534" transform="translate(2.634)">
+                          <path id="Path_15229" data-name="Path 15229" d="M205.559,456.68a.909.909,0,0,1-.908-.909v-4.324a3.629,3.629,0,1,0-7.257,0v4.324a.909.909,0,1,1-1.817,0v-4.324a5.446,5.446,0,1,1,10.891,0v4.324A.91.91,0,0,1,205.559,456.68Z" transform="translate(-195.577 -446)" fill="#040303" />
+                        </g>
+                        <g id="Group_535" data-name="Group 535" transform="translate(0 8.881)">
+                          <path id="Path_15230" data-name="Path 15230" d="M196.446,466.733a2.756,2.756,0,0,1-2.751-2.753V455.1a2.756,2.756,0,0,1,2.751-2.753h11.23a2.755,2.755,0,0,1,2.75,2.753v4.966a.909.909,0,1,1-1.817,0V455.1a.935.935,0,0,0-.933-.936h-11.23a.935.935,0,0,0-.933.936v8.878a.935.935,0,0,0,.933.936h2.1a.909.909,0,0,1,0,1.817Z" transform="translate(-193.694 -452.349)" fill="#040303" />
+                        </g>
+                      </g>
+                    </svg>
+
+                    Change Password
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" (click)="logout()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 26.696 23.785" class="mr-1">
+                      <g id="Logout" transform="translate(0)">
+                        <path id="Path_15231" data-name="Path 15231" d="M239.559,472.058a2.573,2.573,0,0,1-2.57-2.57V450.842a2.572,2.572,0,0,1,2.57-2.569h10.036a2.57,2.57,0,0,1,2.57,2.566v3.84a.92.92,0,0,1-1.84,0v-3.84a.728.728,0,0,0-.73-.725H239.559a.73.73,0,0,0-.73.728v18.646a.731.731,0,0,0,.73.73h10.036a.729.729,0,0,0,.73-.725V465.65a.92.92,0,0,1,1.84,0v3.842a2.571,2.571,0,0,1-2.57,2.566Zm16.655-4.389a.99.99,0,0,1-.881-.618.844.844,0,0,1,.222-.968l4.324-4.312c.212-.212.185-.381.151-.464s-.137-.224-.439-.224H247.658a.917.917,0,1,1,0-1.835h11.933c.3,0,.4-.14.439-.224s.061-.253-.151-.463l-4.324-4.312a.846.846,0,0,1-.222-.97.992.992,0,0,1,.881-.617.9.9,0,0,1,.641.288l6.475,6.357a1.177,1.177,0,0,1,.356.841,1.159,1.159,0,0,1-.35.833l-6.479,6.4A.908.908,0,0,1,256.214,467.668Z" transform="translate(-236.989 -448.273)" fill="#040303" fill-rule="evenodd" />
+                      </g>
+                    </svg>
+
+                    Logout
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- header code ends-->
+      <!--Page content-->
+      <router-outlet></router-outlet>
+
+      <!-- footer code starts-->
+      <div class="fixed-footer">
+        Copyright &copy; {{currentYear}} TODO APP
+      </div>
+      <!-- footer code ends-->
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div>
+        <app-admin-menu *ngIf="loggedInUser.RoleId == userRoles.SuperAdmin"></app-admin-menu>
+        <app-internal-organization-menu *ngIf="loggedInUser.RoleId == userRoles.Organization"></app-internal-organization-menu>
+        <app-internal-supplier-menu *ngIf="loggedInUser.RoleId == userRoles.Supplier"></app-internal-supplier-menu>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Supplier <span class="sr-only">(current)</span></a>
+            </li>
+        </ul> -->
+<!-- <ul class="navbar-nav mr-auto pull-right" style="cursor: pointer;">
+            <li class="nav-item" [ngClass]="{'active': currentLanguage=='en'}">
+                <span class="nav-link" (click)="changeLang('en')">en</span>
+            </li>
+            <li class="nav-item" [ngClass]="{'active': currentLanguage=='fr'}">
+                <span class="nav-link" (click)="changeLang('fr')">fr</span>
+            </li>
+            <li class="nav-item" [ngClass]="{'active': currentLanguage=='nl'}">
+                <span class="nav-link" (click)="changeLang('nl')">nl</span>
+            </li>
+        </ul> -->
+<!-- </div>
+
+    <div>
+        <a href="javascript:void(0);" (click)="logout()">Logout</a>
+    </div>
+</nav>
+
+<div class="card">
+    <div class="card-body" style="height: 100%;">
+        <router-outlet></router-outlet>
+    </div>
+</div> -->

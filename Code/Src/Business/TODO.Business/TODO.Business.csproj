@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Company\**" />
+    <Compile Remove="Recommendation\**" />
+    <EmbeddedResource Remove="Company\**" />
+    <EmbeddedResource Remove="Recommendation\**" />
+    <None Remove="Company\**" />
+    <None Remove="Recommendation\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.1.0" />
+    <PackageReference Include="Dapper.Bulk" Version="1.4.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.1.3" />
+    <PackageReference Include="Unity.Container" Version="5.9.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Configuration\TODO.Configuration\TODO.Configuration.csproj" />
+    <ProjectReference Include="..\..\Data\Data.Generic\Data.Generic.csproj" />
+    <ProjectReference Include="..\..\Data\TODO.Data\TODO.Data.csproj" />
+    <ProjectReference Include="..\..\Extensions\Cryptography\Cryptography.csproj" />
+    <ProjectReference Include="..\..\Extensions\JwtManager\JwtManager.csproj" />
+  </ItemGroup>
+
+</Project>

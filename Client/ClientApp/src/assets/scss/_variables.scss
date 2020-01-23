@@ -1,0 +1,45 @@
+// Color system
+
+$primary-color:#08b0d8;
+$nav-gray: #040303;
+$light-gray:#707070;
+$light-blue: #F8F8F8;
+$blue: #235061;
+
+$secndary-color: #ec4b7a;
+$gray-blue:#717B8A;
+
+$gray-black: #1F2322;
+$black: #000;
+$white: #fff;
+$gray: #c6c7c6;
+$dark-gray: #797b7a;
+
+$label-gray: #565656;
+ /*font-size*/
+ $base-size:  13px;
+
+$light-green:#00bb77;
+$blue-dark:#157fea;
+$mid-yellow:#ec9d14;
+$light-dark: #3a3a49;
+$light-red: #e04545;
+// status color
+$stauts-started : #8b8989;
+$stauts-accepted : #fac023;
+$stauts-completed : #00bb77;
+$stauts-pending : #157fea;
+$stauts-rejected : #ec5f70;
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+

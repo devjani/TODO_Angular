@@ -1,0 +1,39 @@
+<div mat-dialog-title class="modalheader">
+    <h6>{{ (isAdd ? 'Add Todo' : 'Edit Todo')}}</h6>
+    <div mat-dialog-actions class="popup-close closeicon">
+        <div (click)="close()">
+            <span>x</span>
+        </div>
+    </div>
+</div>
+<div mat-dialog-content style="overflow:unset;">
+    <form [formGroup]="addEditTodo">
+        <div class="row">
+            <div class="col-sm-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input appNoSpaces matInput formControlName="name" maxlength="100"
+                        [errorStateMatcher]="errorMatcher" autocomplete="off">
+                    <mat-error *ngIf="addEditTodo.get('name').hasError('required') || addEditTodo.get('name').hasError('whitespace')">
+                        Todo name required
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="col-sm-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Description</mat-label>
+                    <textarea appNoSpaces matInput formControlName="desciption" maxlength="100"
+                        [errorStateMatcher]="errorMatcher" autocomplete="off" ></textarea>
+                    <mat-error *ngIf="addEditTodo.get('desciption').hasError('required') || addEditTodo.get('desciption').hasError('whitespace')">
+                        Desciption is required
+                    </mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+    </form>
+</div>
+<div mat-dialog-actions class="btnSubmit submitbutton">
+    <button mat-button (click)="close()" class="btncancel"> Cancel</button>
+    <button mat-button (click)="onSubmit()">Save</button>
+</div>

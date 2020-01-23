@@ -1,0 +1,46 @@
+
+<div class="loginbox">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 login-half">
+          <span class="d-block mt-15">     
+              <img src="../../../../assets/images/logo.png" alt="Logo"></span>
+      </div>
+    </div>
+  <div class="row m-0 justify-content-center">
+    <div class="col-12 col-md-4 p-0">
+      <div class="formbg">
+        <div>
+           
+          <div class="text-center">
+            <div class="loginto"><h5 class="mb-15 d-inline-block">Login</h5></div>
+
+          </div>
+          <form autocomplete="off" #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)" novalidate>
+            <app-text-box [isRequired]="true" [inputType]="inputConstants.textType" [isSubmitPressed]="isFormSubmitted"
+              [pattern]="emailPattern" [patternErrorTxt]="emailFormatValidationText"
+              [requiredErrorTxt]="emailRequiredErrorText" [(ngModel)]="loginModel.Username" [inputLength]="50"
+              name="Username" [placeholder]="'User name'">
+            </app-text-box>
+            <br />
+
+            <app-text-box [isRequired]="true" [inputType]="inputConstants.passwordType"
+              [isSubmitPressed]="isFormSubmitted" [requiredErrorTxt]="passwordRequiredErrorText"
+              [(ngModel)]="loginModel.Password" [inputLength]="20" name="Password" [placeholder]="'Password'">
+            </app-text-box>
+            <br>
+            <div class="login-footer">
+              <mat-checkbox [(ngModel)]="loginModel.RememberMe" name="Keep me log in">
+                Remember Me
+              </mat-checkbox>
+            </div>
+            <div class="btnSubmit loginsubmit">
+              <button type="submit" mat-raised-button color="primary">Sign in</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

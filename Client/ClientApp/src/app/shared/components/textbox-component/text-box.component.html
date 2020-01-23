@@ -1,0 +1,14 @@
+<mat-form-field>
+    <mat-label>{{placeholder}}</mat-label>
+  <input autocomplete="off" matInput [type]="inputType" [disabled]="isDisabled"
+    placeholder="{{ placeholder }}" (input)="onChange($event.target.value)" #input (blur)="onTouched()"
+    (keyup)="modelChange()" [attr.maxLength]="inputLength > 0 ? inputLength : 50"
+    onKeyPress="if(this.value.length >= this.maxLength) return false;">
+</mat-form-field>
+<mat-error class="fa fa-warning" *ngIf="controlDir && (!controlDir.control.valid || controlDir.control.value === '') 
+    && controlDir.control.errors && controlDir.control.errors['required'] && isSubmitPressed"
+  [innerHtml]="requiredErrorTxt">
+</mat-error>
+<mat-error class="fa fa-warning" *ngIf="controlDir && !controlDir.control.valid 
+  && controlDir.control.errors['pattern'] && isSubmitPressed" [innerHtml]="patternErrorTxt">
+</mat-error>

@@ -1,0 +1,45 @@
+<div class="page-title">
+    <div class="row m-0">
+        <div class="col-sm-12 text-sm-right p-0">
+            <button mat-flat-button class="breadcrumb-btn mb-30"  (click)="addEditTodo(false)">
+                <i class="fa fa-plus" aria-hidden="true"></i> Add Todo
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class='table-responsive '>
+    <table matSort (matSortChange)="sortData($event)" mat-table [dataSource]="dataSource"  class="hover-row"
+        style="width:100%">
+
+        <ng-container matColumnDef="name">
+            <th mat-sort-header="name" mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="columns"></tr>
+        <tr mat-row *matRowDef="let row; columns: columns;" (click)="onMatTableRowClick(row)">
+        </tr>
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef> Actions </th>
+            <td mat-cell *matCellDef="let element">
+              <div class="table-data-wrapper">
+      
+                <a href="javascript:void(0);" class="edit-icon" (click)="$event.stopPropagation();addEditTodo(element);">
+                  <i class="fa fa-pencil" aria-hidden="true"></i>
+                </a> &nbsp;
+                <a href="javascript:void(0);" (click)="$event.stopPropagation();deleteTodo(element.id);">
+                  <i class="fa fa-trash" aria-hidden="true"></i>
+                </a>
+              </div>
+            </td>
+          </ng-container>
+    </table>
+    <mat-toolbar color="grey" *ngIf="!isLoading && dataSource && dataSource.data.length === 0">
+            <p>No Record Found</p>
+    </mat-toolbar>
+    <div [hidden]="!(show && !isLoading)">
+        <mat-paginator #paginator (page)="filterData()" [length]="totalMasterCount" [pageIndex]=0 [pageSize]="pageSize"
+            [pageSizeOptions]="[10,25,50,100]" showFirstLastButtons="true">
+        </mat-paginator>
+    </div>
+</div>

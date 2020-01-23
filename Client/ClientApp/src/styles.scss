@@ -1,0 +1,617 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "./assets/scss/general.scss";
+
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+// @import "~@ng-select/ng-select/themes/material.theme.css";
+@import "~@ng-select/ng-select/themes/default.theme.css";
+// @import "https://cdn.datatables.net/responsive/2.0.2/css/responsive.dataTables.min.css";
+
+@import "assets/font.css";
+
+body {
+  font-family: "Muli", sans-serif !important;
+}
+
+.pull-right {
+  right: 0;
+}
+
+body {
+  height: 100vh;
+}
+
+.pointer-cls {
+  cursor: pointer;
+}
+/*.mat-form-field {
+  width: 70%;
+}*/
+.modal-open {
+  overflow: hidden;
+}
+
+.formbg {
+  background-image: url("assets/images/Login-Bg-Pattern.png");
+  background-repeat: no-repeat;
+  /*background-position: center;*/
+  height: 100%;
+  margin-right: 30px;
+
+  form {
+    /*position: relative;
+    left: 50%;
+    top: 50%;
+    width: 80%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-box-align: center;
+    align-items: center;*/
+    app-text-box {
+      mat-form-field {
+        width: 100%;
+
+        .mat-form-field-flex {
+          display: block;
+        }
+
+        .mat-form-field-wrapper {
+          margin-bottom: 5px;
+        }
+
+        .mat-form-field-infix {
+          border: 0;
+          /*box-shadow: 1px 2px 5px #0000004d;*/
+          box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+          width: 100%;
+          /*padding: 18px 7px;*/
+          padding: 23px 12px;
+          background: #ffffff 0% 0% no-repeat padding-box;
+
+          .mat-form-field-label {
+            color: #707070;
+            /*padding: 11px 7px;*/
+            padding: 15px 20px;
+          }
+        }
+      }
+
+      .mat-form-field-appearance-legacy .mat-form-field-underline {
+        background-color: transparent !important;
+      }
+
+      .fa-warning:before,
+      .fa-exclamation-triangle:before {
+        margin-right: 10px;
+      }
+    }
+
+    .mat-checkbox-checked.mat-accent .mat-checkbox-background,
+    .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+      background-color: #f09a2b;
+    }
+  }
+}
+
+/*.mat-form-field-appearance-legacy.mat-form-field-can-float .mat-input-server:focus + .mat-form-field-label-wrapper .mat-form-field-label, .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+  padding: 0px 23px !important;
+}*/
+
+.login-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  color: #040303;
+  font-weight: 400;
+
+  a {
+    color: #040303;
+  }
+
+  .mat-checkbox-label {
+    margin-left: 7px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .formbg {
+    app-text-box {
+      mat-form-field {
+        .mat-form-field-infix {
+          padding: 18px 10px !important;
+
+          .mat-form-field-label {
+            padding: 11px 10px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.formbg
+.mat-form-field-appearance-legacy.mat-form-field-can-float
+.mat-input-server:focus + .mat-form-field-label-wrapper
+.mat-form-field-label,
+.formbg .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+  padding: 0px 10px !important;
+}
+/*@media only screen and (max-width: 1200px) {
+  .loginbox {
+    .formbg {
+      > div {
+        width: 50% !important;
+      }
+    }
+  }
+}*/
+
+_:-ms-lang(x),
+_:-webkit-full-screen,
+.loginbox {
+  height: auto !important;
+
+  img {
+    height: auto !important;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .loginbox {
+    height: auto !important;
+
+    img {
+      height: auto;
+    }
+  }
+}
+
+.searchlist {
+  .container {
+    padding: 0;
+    margin-bottom: 8px;
+    max-width: 100%;
+  }
+
+  .mat-expansion-panel-header {
+    height: 35px !important;
+    font-size: 13px;
+    padding: 0px 10px;
+
+    @media only screen and (max-width: 1366px) {
+      height: 30px !important;
+    }
+  }
+
+  .dataTables_length {
+    /*padding: 15px 15px 0px 15px;*/
+    padding: 10px 8px 0px 8px;
+    font-size: 13px;
+
+    @media only screen and (max-width: 767px) {
+      padding-bottom: 8px;
+      float: left !important;
+    }
+
+    label {
+      margin-bottom: 0px !important;
+    }
+    /*@media only screen and (max-width: 1366px) {
+      padding: 8px 15px 0px 15px;
+    }*/
+  }
+
+  .dataTables_filter {
+    padding: 8px 8px 0px 8px;
+    font-size: 13px;
+
+    @media only screen and (max-width: 767px) {
+      padding-bottom: 8px;
+      float: right !important;
+      margin-top: 0px !important;
+    }
+
+    @media only screen and (max-width: 480px) {
+      float: left !important;
+    }
+
+    label {
+      margin-bottom: 0px !important;
+    }
+    /*@media only screen and (max-width: 1366px) {
+      padding: 8px 15px 0px 15px;
+    }*/
+    input {
+      border: 1px solid #e0e0e0;
+      border-radius: 5px;
+      padding: 3px 15px;
+    }
+  }
+
+  .dataTables_wrapper {
+    background: #fff;
+    /*padding: 15px;*/
+    padding: 0px;
+    margin-bottom: 30px;
+
+    .dataTables_paginate .paginate_button.current,
+    .dataTables_paginate .paginate_button.current:hover {
+      padding: 0 !important;
+      background: #f09a2b !important;
+      box-shadow: none !important;
+      border: 0 !important;
+      color: #fff !important;
+    }
+  }
+
+  .dataTables_info {
+    padding: 5px 8px;
+    font-size: 13px;
+  }
+
+  mat-form-field {
+    width: 100%;
+  }
+
+  .btnSubmit {
+    text-align: center;
+
+    button {
+      &:first-child {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.dataTables_paginate {
+  font-size: 13px;
+}
+
+.add-data {
+  mat-form-field {
+    width: 100%;
+  }
+
+  .mat-form-field-flex {
+    font-size: 13px;
+
+    label.mat-form-field-label {
+      padding-left: 0px !important;
+    }
+  }
+}
+
+.border-right-ccc {
+  border-right: 1px dashed #ccc;
+
+  @media only screen and (max-width: 767px) {
+    border-right: 0px;
+  }
+}
+
+/*.submitbutton {
+  button {
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #F09A2B !important;
+    height: 48px;
+    border-radius: 0 !important;
+    color: #fff;
+    padding: 0 25px !important;
+    font-family: "Muli", sans-serif !important;
+
+    @media only screen and (max-width: 1366px) {
+      height: 40px;
+    }
+
+    &.btncancel {
+      background-color: #e6e6e6 !important;
+      color: #000;
+    }
+  }
+}*/
+
+.submitbutton {
+  button {
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #f09a2b;
+    /*height: 48px;*/
+    height: 35px;
+    border-radius: 0 !important;
+    color: #fff;
+    /*padding: 0 25px !important;*/
+    height: 35px;
+    padding: 0px 15px !important;
+    line-height: 15px !important;
+    font-family: "Muli", sans-serif !important;
+
+    @media only screen and (max-width: 1366px) {
+      height: 30px;
+      padding: 0px 10px !important;
+      line-height: 17px !important;
+      font-size: 13px;
+    }
+
+    &.btncancel {
+      background-color: #e6e6e6 !important;
+      color: #000;
+    }
+  }
+}
+
+.pagetitle {
+  margin: 0 10px !important;
+}
+
+table.dataTable td.dataTables_empty {
+  text-align: center;
+}
+
+table.dataTable.display tbody tr.odd {
+  font-size: 16px;
+  background: transparent;
+
+  td {
+    background: #fff;
+    width: 100%;
+    text-align: center;
+  }
+  /*position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 40px;
+  height: 30px;
+  padding-top: 3px;*/
+}
+/*table.dataTable.display tbody tr.odd {
+  text-align: center;
+  display: block;
+  -webkit-box-pack: center;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  top: 75px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}*/
+
+.mgr-top-25 {
+  margin-top: 25px;
+}
+
+.font-20 {
+  font-size: 20px !important;
+}
+
+.arrow.animate-left-to-right {
+  animation-name: move-left-to-right;
+  animation-duration: 1s;
+  animation-delay: 0.6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternative;
+}
+
+@keyframes move-left-to-right {
+  0% {
+    transform: translateX(5%);
+  }
+
+  50% {
+    transform: translateX(15%);
+  }
+
+  100% {
+    transform: translateX(5%);
+  }
+}
+
+.filtertextboxes {
+  input {
+    font-size: 13px;
+  }
+
+  label {
+    font-size: 13px;
+  }
+}
+
+.mailbox {
+  mat-form-field {
+    width: 100%;
+  }
+
+  input {
+    font-size: 13px;
+  }
+
+  label {
+    font-size: 13px;
+  }
+}
+
+.supplierlogo {
+  img {
+    width: 100%;
+    height: 100%;
+
+    @media only screen and (max-width: 767px) {
+      padding-bottom: 15px;
+    }
+  }
+}
+
+.holiday-table {
+  td {
+    label {
+      margin-bottom: 0px !important;
+    }
+  }
+}
+
+.border-bottom-ccc {
+  border-bottom: 1px dashed #ccc;
+}
+
+.nodatatable {
+  .dataTables_empty {
+    position: relative !important;
+    left: 50% !important;
+    top: 0 !important;
+    transform: translate(-50%, 0) !important;
+  }
+}
+
+.title {
+  /*float: left;*/
+  padding-left: 15px;
+  font-weight: 700;
+  font-size: 20px;
+  padding-top: 8px;
+
+  @media only screen and (max-width: 1366px) {
+    font-size: 16px;
+  }
+
+  @include media-breakpoint-up(md) {
+    padding-left: 15px;
+  }
+
+  @media only screen and (max-width: 500px) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 60px;
+    padding-top: 10px;
+    font-size: 14px;
+    padding-left: 0;
+  }
+
+  @media only screen and (max-width: 320px) {
+    width: 40px;
+  }
+}
+
+.autowidth {
+  width: auto !important;
+}
+
+.cancelbtn {
+  .timepicker-button {
+    background-color: #e6e6e6 !important;
+
+    span {
+      color: #000 !important;
+    }
+  }
+}
+
+.okbtn {
+  .timepicker-button {
+    background-color: #f09a2b !important;
+    margin-left: 7px;
+
+    span {
+      color: #fff !important;
+    }
+  }
+}
+
+.noimage {
+  display: flex;
+  justify-content: center;
+}
+
+.font-13 {
+  font-size: 13px !important;
+}
+
+.tabgroup {
+  mat-tab-body {
+    .mat-tab-body-content {
+      overflow: hidden !important;
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      border-top: 0px;
+    }
+
+    .viewdetail {
+      padding: 15px 25px 5px 15px !important;
+    }
+  }
+
+  mat-ink-bar {
+    background-color: #f09a2b !important;
+  }
+
+  .mat-tab-label {
+    min-width: unset !important;
+    height: 35px;
+
+    &.mat-tab-label-active {
+      background: #f09a2b !important;
+      opacity: 1;
+      color: #fff;
+    }
+  }
+}
+
+.dataTables_wrapper .dataTables_processing {
+  height: 60px !important;
+  margin-top: 25px !important;
+  background: #fff !important;
+
+  @media only screen and (max-width: 480px) {
+    margin-top: 45px !important;
+  }
+}
+
+.suppliernotes {
+  .dataTables_wrapper {
+    margin-bottom: 0px !important;
+  }
+}
+
+.setpasswordform {
+  app-text-box[name=confirmPassword] {
+    .mat-error {
+      padding-bottom: 20px;
+    }
+  }
+}
+.datepickers {
+  .mat-datepicker-toggle-default-icon {
+    font-size: 20px;
+
+    @media only screen and (max-width: 767px) {
+      font-size: 18px;
+    }
+  }
+}
+.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+  background-color: #f09a2b;
+}
+.chk-price-auto-adjust {
+  label {
+    margin-bottom: 0px;
+  }
+
+  .mat-checkbox-label{font-size: 12px;}
+}
+.holidaylist {
+  app-upcoming-holiday-list {
+    table {
+      padding: 1rem;
+    }
+  }
+}
+@-moz-document url-prefix() {
+  input{padding-bottom: 1px !important;}
+}
+.pending-color {
+  color: #F09A2B;
+}
+.request-not-sent-color {
+  color: red;
+}
+.v-align-middle{vertical-align: middle !important;}

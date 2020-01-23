@@ -1,0 +1,13 @@
+.wrapper {
+    display: flex;
+    align-items: stretch;
+  }
+  .main-page {
+    width: 100%;
+    min-height: 100vh;
+    transition: all 0.3s;
+  }
+  .content{
+      padding: 35px;
+      margin: 35px 45px;
+  }

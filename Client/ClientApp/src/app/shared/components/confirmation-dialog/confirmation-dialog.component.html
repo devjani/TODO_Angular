@@ -1,0 +1,17 @@
+<div mat-dialog-title class="modalheader">
+  <h6>{{ title }}</h6>
+    <div mat-dialog-actions class="popup-close closeicon">
+        <div (click)="dismiss()">
+            <span>x</span>
+        </div>
+    </div>
+</div>
+
+<div mat-dialog-content class="text-center font-weight-bold">
+    <p>{{ message }}</p>
+</div>
+<div mat-dialog-actions class="btnSubmit submitbutton">
+  <button mat-button (click)="decline()" class="btncancel">{{ btnCancelText }}</button>
+  <button mat-button (click)="accept()" cdkFocusInitial>{{ btnOkText }}</button>
+
+</div>

@@ -1,0 +1,45 @@
+<div class="container-fluid">
+  <div class="logo-img d-inline-block">
+    <div class="row">
+      <div class="col-md-6 login-half">
+          <span class="d-block mt-15">     
+              <img src="../../../../assets/images/logo.png" alt="Logo"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="header-title-main">
+  <div class="header-title">
+    <h6> {{tileService.headerTitle}}</h6>
+  </div>
+  <div class="d-inline-block" *ngIf="tileService.backButton"> <a class="back-btn" href="javascript:void(0);"
+      [routerLink]="tileService.link">
+      Back</a></div>
+  </div>
+
+  <div class="d-inline-block text-right float-md-right">
+    <div class="user-name">
+      <b>{{userName}}</b>
+      <!-- <span class="type">Technician</span> -->
+      <button mat-icon-button [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger"
+        (click)="menuTrigger.openMenu();$event.stopPropagation();">
+        <span><i class="fa fa-angle-down" aria-hidden="true"></i> </span>
+      </button>
+      <mat-menu #menu="matMenu" [overlapTrigger]="false" (mouseleave)="menuTrigger.closeMenu()">
+        <span>
+          <button *ngIf="!isCustomer" mat-menu-item (click)="changeProfileClick()"> <i class="fa fa-cog"
+              aria-hidden="true"></i>
+            &nbsp;MyProfile
+          </button>
+          <button mat-menu-item (click)="changePasswordClick()"><i class="fa fa-key" aria-hidden="true"></i>
+            &nbsp;Change Password
+          </button>
+          <button *ngIf="!isMobile"  mat-menu-item (click)="logout()"> <i class="fa fa-sign-out" aria-hidden="true"></i> &nbsp;
+            Logout
+          </button>
+        </span>
+      </mat-menu>
+    </div>
+  </div>
+</div>

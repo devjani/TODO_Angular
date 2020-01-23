@@ -1,0 +1,49 @@
+
+
+@font-face {
+  font-family: 'Muli';
+  src: url('fonts/Muli-Regular.eot');
+  src: url('fonts/Muli-Regular.eot?#iefix') format('embedded-opentype'), url('fonts/Muli-Regular.woff2') format('woff2'), url('fonts/Muli-Regular.woff') format('woff'), url('fonts/Muli-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Muli';
+  src: url('fonts/Muli-Light.eot');
+  src: url('fonts/Muli-Light.eot?#iefix') format('embedded-opentype'), url('fonts/Muli-Light.woff2') format('woff2'), url('fonts/Muli-Light.woff') format('woff'), url('fonts/Muli-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* @font-face {
+  font-family: 'Muli';
+  src: url('fonts/Muli-ExtraBold.eot');
+  src: url('fonts/Muli-ExtraBold.eot?#iefix') format('embedded-opentype'), url('fonts/Muli-ExtraBold.woff2') format('woff2'), url('fonts/Muli-ExtraBold.woff') format('woff'), url('fonts/Muli-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+} */
+
+/* @font-face {
+  font-family: 'Muli';
+  src: url('fonts/Muli-Black.eot');
+  src: url('fonts/Muli-Black.eot?#iefix') format('embedded-opentype'), url('fonts/Muli-Black.woff2') format('woff2'), url('fonts/Muli-Black.woff') format('woff'), url('fonts/Muli-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: 'Muli';
+  src: url('fonts/Muli-Bold.eot');
+  src: url('fonts/Muli-Bold.eot?#iefix') format('embedded-opentype'), url('fonts/Muli-Bold.woff2') format('woff2'), url('fonts/Muli-Bold.woff') format('woff'), url('fonts/Muli-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Muli';
+  src: url('fonts/Muli-SemiBold.eot');
+  src: url('fonts/Muli-SemiBold.eot?#iefix') format('embedded-opentype'), url('fonts/Muli-SemiBold.woff2') format('woff2'), url('fonts/Muli-SemiBold.woff') format('woff'), url('fonts/Muli-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
